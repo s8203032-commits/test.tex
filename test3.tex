@@ -1,0 +1,32 @@
+\documentclass{beamer}
+\usetheme{Singapore}
+\usepackage{mhchem,hyperref,tikz}
+\title{Prezentacja}
+
+\begin{document}
+  \frame{\maketitle}
+
+  \begin{frame}
+    \frametitle{\ce{
+      Zn^2+
+      <=>[+ 2OH-][+ 2H+]
+      $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$
+      <=>[+ 2OH-][+ 2H+]
+      $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$
+    }}  
+
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{scope}[blend group = soft light]
+          \fill[red!30!white]   ( 90:1.2) circle (2);
+          \fill[green!30!white] (210:1.2) circle (2);
+          \fill[blue!30!white]  (330:1.2) circle (2);
+        \end{scope}
+        \node at ( 90:2)    {Typography};
+        \node at ( 210:2)   {Design};
+        \node at ( 330:2)   {Coding};
+        \node [font=\Large] {\LaTeX};
+      \end{tikzpicture}
+    \end{center}
+  \end{frame}
+\end{document} 

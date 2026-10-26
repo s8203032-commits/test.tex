@@ -1,0 +1,115 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{footnote}
+
+% Ustawienia marginesów - sensowne wartości
+\setlength{\topmargin}{1.5cm}
+\setlength{\oddsidemargin}{2cm}
+\setlength{\evensidemargin}{2cm}
+\setlength{\textwidth}{15cm}
+\setlength{\textheight}{20cm}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{20pt}
+\setlength{\footskip}{30pt}
+
+\begin{document}
+
+% Strona tytułowa
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\LARGE\bfseries Twój Tytuł Dokumentu\par}
+    \vspace{1cm}
+    
+    {\large\bfseries\textit{Autor: Twoje Imię i Nazwisko\par}
+    \textit{Przedmiot: Nazwa Przedmiotu\par}
+    \textit{Data: 17 października 2026\par}}
+    
+    \vfill
+    
+    {\large\bfseries \href{https://przyklad.pl}{Przykładowa strona internetowa}\par}
+    
+    \vspace{2cm}
+    
+    {\small\bfseries \textbf{Przypis:} Ten dokument zawiera wszystkie wymagane elementy\par}
+    
+\end{titlepage}
+
+\null
+\thispagestyle{empty}
+
+\section{Wprowadzenie}
+
+Poniżej przedstawiono dokument zawierający wszystkie wymagane elementy.
+
+\subsection{Ilustracja}
+
+Używamy pakietu \texttt{graphicx} do wstawiania obrazów:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{przyklad.png}
+    \caption{To jest przykładowy podpis pod obrazem}
+    \label{fig:przyklad}
+\end{figure}
+
+Więcej informacji znajdziesz na stronie <\ref{fig:przyklad}>.
+
+\subsection{Wzór matematyczny}
+
+Poniższy wzór wykorzystuje polecenia \texttt{\label{}} i \texttt{\ref{}}:
+
+\begin{equation}
+    F = G \frac{m_1 m_2}{r^2}
+\end{equation}
+
+Zobacz wzór <\ref{eq:przyciazanie}>.
+
+\subsection{Wzór chemiczny}
+
+Używamy pakietu \texttt{mhchem} do zapisu wzorów chemicznych:
+
+\[
+    \ce{2H2 + O2 -> 2H2O}
+\]
+
+Inny przykład reakcji:
+
+\[\ce{Zn + 2HCl -> ZnCl2 + H2}\]
+
+\subsection{Odnośnik do strony internetowej}
+
+Więcej informacji można znaleźć w dokumentacji LaTeX:
+
+\begin{verbatim}
+\url{https://www.latex-project.org}
+\end{verbatim}
+
+Albo bezpośrednio:
+
+\url{https://www.overleaf.com}
+
+\section{Dodatkowe informacje}
+
+Poniżej jeszcze raz wszystkie elementy na liście:
+
+\begin{itemize}
+    \item \textbf{Strona tytułowa} - polecenia \texttt{\author{}}, \texttt{\title{}} i \texttt{\maketitle{}}
+    \item \textbf{Ilustracja} - pakiet \texttt{graphicx} z odwołańami \texttt{\label{}} i \texttt{\ref{}}
+    \item \textbf{Wzór matematyczny} - pakiet \texttt{amsmath}, \texttt{amssymb} z \texttt{\label{}} i \texttt{\ref{}}
+    \item \textbf{Marginesy} - pakiet \texttt{fullpage} lub ręczne ustawienia
+    \item \textbf{Odnośnik internetowy} - pakiet \texttt{hyperref}, polecenie \texttt{\url{}}
+    \item \textbf{Przypis} - polecenie \texttt{\footnote{}}
+    \item \textbf{Wzór chemiczny} - pakiet \texttt{mhchem}, polecenie \texttt{\ce{}}
+\end{itemize}
+
+\end{document}
